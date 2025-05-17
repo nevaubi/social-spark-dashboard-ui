@@ -49,7 +49,7 @@ function Feature({ icon, title, description, delay }: FeatureProps) {
   return (
     <div 
       ref={featureRef} 
-      className="ios-card opacity-0"
+      className="ios-card opacity-0 soft-glow"
     >
       <div className="mb-4">
         <div className="feature-icon">{icon}</div>
@@ -89,7 +89,10 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-20 relative">
+    <section id="features" className="py-20 relative blue-peach-gradient">
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 subtle-pattern opacity-30 pointer-events-none"></div>
+      
       <div className="container px-4 sm:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Powerful Features</h2>
@@ -114,6 +117,8 @@ export default function FeaturesSection() {
       {/* Background decorations */}
       <div className="absolute bottom-10 left-10 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl"></div>
       <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/5 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-40 left-40 w-36 h-36 bg-blue-200/20 rounded-full filter blur-xl"></div>
+      <div className="absolute bottom-40 right-40 w-48 h-48 bg-secondary/10 rounded-full filter blur-2xl"></div>
     </section>
   );
 }
