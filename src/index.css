@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 200 80% 65%;
+    --primary: 196 100% 47%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 16 85% 75%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 200 80% 65%;
+    --ring: 196 100% 47%;
 
     --radius: 1.25rem;
   }
@@ -84,7 +84,7 @@
 
 @layer components {
   .ios-button {
-    @apply rounded-full px-6 py-3 font-medium transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97];
+    @apply rounded-full px-6 py-2.5 font-medium transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97];
   }
 
   .ios-shadow {
@@ -96,7 +96,7 @@
   }
 
   .navbar-blur {
-    @apply bg-background/80 backdrop-blur-md border-b border-border/50;
+    @apply bg-white dark:bg-gray-900 border-b border-border/50;
   }
 
   .feature-icon {
@@ -142,7 +142,7 @@
 
   .soft-glow::after {
     @apply content-[''] absolute inset-0 rounded-[inherit] opacity-0 transition-all duration-300;
-    box-shadow: 0 0 15px 2px rgba(100, 181, 246, 0.3);
+    box-shadow: 0 0 15px 2px rgba(20, 170, 238, 0.3);
   }
 
   .soft-glow:hover::after {
@@ -150,6 +150,10 @@
   }
 
   .dark .soft-glow::after {
-    box-shadow: 0 0 20px 4px rgba(100, 181, 246, 0.4);
+    box-shadow: 0 0 20px 4px rgba(20, 170, 238, 0.4);
+  }
+  
+  .nav-button {
+    @apply rounded-full px-5 py-2 text-[15px] font-medium transition-colors;
   }
 }
