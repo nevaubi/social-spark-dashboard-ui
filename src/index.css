@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 196 80% 65%;
+    --primary: 200 80% 65%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 16 85% 75%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 196 80% 65%;
+    --ring: 200 80% 65%;
 
     --radius: 1.25rem;
   }
@@ -125,7 +125,7 @@
   }
   
   .warm-gradient {
-    @apply bg-gradient-to-br from-blue-50 to-secondary/10 dark:from-blue-900/10 dark:to-secondary/20;
+    @apply bg-primary/10 dark:from-blue-900/10 dark:to-secondary/20;
   }
   
   .accent-gradient {
@@ -133,7 +133,7 @@
   }
 
   .blue-peach-gradient {
-    @apply bg-gradient-to-br from-primary/30 via-blue-300/20 to-secondary/30;
+    @apply bg-background;
   }
 
   .soft-glow {
