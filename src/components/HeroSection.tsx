@@ -4,12 +4,20 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="pt-32 pb-20 overflow-hidden">
-      <div className="container px-4 sm:px-8">
+    <section className="pt-32 pb-20 overflow-hidden relative warm-gradient">
+      {/* Decorative elements */}
+      <div className="absolute top-24 left-0 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-60 dark:opacity-20 animate-pulse"></div>
+      <div className="absolute top-96 right-0 w-80 h-80 bg-secondary/10 rounded-full filter blur-3xl opacity-60 dark:opacity-20 animate-pulse" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute bottom-16 left-40 w-40 h-40 bg-amber-400/10 rounded-full filter blur-2xl opacity-40 dark:opacity-10 animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+      
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 subtle-pattern opacity-30 pointer-events-none"></div>
+      
+      <div className="container px-4 sm:px-8 relative">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Simplify</span> Your Social Media Workflow
+              <span className="accent-gradient">Simplify</span> Your Social Media Workflow
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
@@ -17,7 +25,7 @@ export default function HeroSection() {
             </p>
             
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <Button size="lg" className="ios-button px-8 py-6 text-lg gap-2 group">
+              <Button size="lg" className="ios-button px-8 py-6 text-lg gap-2 group glow-effect">
                 Get Started Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -26,8 +34,8 @@ export default function HeroSection() {
           
           <div className="flex-1 animate-bounce-in">
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-              <div className="ios-card overflow-hidden rounded-3xl relative p-1 bg-background">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-xl opacity-30 animate-pulse dark:opacity-40"></div>
+              <div className="ios-card overflow-hidden rounded-3xl relative p-1 bg-background glow-effect">
                 {/* Dashboard mockup with iOS-like UI */}
                 <div className="rounded-2xl bg-gray-50 dark:bg-gray-900 overflow-hidden">
                   {/* iOS-style header */}
@@ -52,7 +60,7 @@ export default function HeroSection() {
                         { label: "Followers", value: "18.4K" },
                         { label: "Growth", value: "+24%" }
                       ].map((stat, i) => (
-                        <div key={i} className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center ios-shadow">
+                        <div key={i} className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center ios-shadow glow-effect">
                           <p className="text-xs text-muted-foreground">{stat.label}</p>
                           <p className="text-xl font-bold">{stat.value}</p>
                         </div>
@@ -60,7 +68,7 @@ export default function HeroSection() {
                     </div>
                     
                     {/* Activity chart */}
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 mb-6 ios-shadow">
+                    <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 mb-6 ios-shadow glow-effect">
                       <div className="flex justify-between items-center mb-4">
                         <p className="font-medium">Engagement</p>
                         <p className="text-xs text-primary">Last 7 days</p>
@@ -88,7 +96,7 @@ export default function HeroSection() {
                     </div>
                     
                     {/* Post schedule */}
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 ios-shadow">
+                    <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 ios-shadow glow-effect">
                       <p className="font-medium mb-4">Scheduled Posts</p>
                       {[
                         { time: "Today, 2:30 PM", title: "Product Launch", platform: "Twitter" },
@@ -112,10 +120,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      
-      {/* Background decorations */}
-      <div className="absolute top-24 left-0 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-60 dark:opacity-20"></div>
-      <div className="absolute top-96 right-0 w-80 h-80 bg-secondary/10 rounded-full filter blur-3xl opacity-60 dark:opacity-20"></div>
     </section>
   );
 }

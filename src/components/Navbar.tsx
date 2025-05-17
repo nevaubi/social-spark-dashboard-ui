@@ -21,7 +21,7 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "navbar-blur py-3" : "py-5"}`}>
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="rounded-xl bg-primary w-9 h-9 flex items-center justify-center">
+          <div className="rounded-xl bg-primary w-9 h-9 flex items-center justify-center glow-effect">
             <span className="text-white font-bold text-lg">S</span>
           </div>
           <span className="font-bold text-xl hidden sm:inline-block">SocialSaaS</span>
@@ -35,8 +35,8 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <Button variant="ghost" className="ios-button">Login</Button>
-          <Button className="ios-button bg-primary hover:bg-primary/90">Sign Up</Button>
+          <Button variant="ghost" className="ios-button glow-effect">Login</Button>
+          <Button className="ios-button bg-primary hover:bg-primary/90 glow-effect">Sign Up</Button>
         </div>
 
         {/* Mobile menu button */}
@@ -45,7 +45,7 @@ export default function Navbar() {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="md:hidden" 
+            className="md:hidden glow-effect" 
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -55,7 +55,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="fixed top-[72px] left-0 right-0 bottom-0 bg-background z-40 flex flex-col md:hidden animate-fade-in">
+          <div className="fixed top-[72px] left-0 right-0 bottom-0 bg-background z-40 flex flex-col md:hidden animate-fade-in subtle-pattern">
             <nav className="flex flex-col p-5 gap-5">
               <a 
                 href="#" 
@@ -72,8 +72,8 @@ export default function Navbar() {
                 Free Tools
               </a>
               <div className="flex flex-col gap-3 mt-4">
-                <Button variant="outline" className="w-full py-6 text-lg">Login</Button>
-                <Button className="w-full py-6 text-lg">Sign Up</Button>
+                <Button variant="outline" className="w-full py-6 text-lg glow-effect">Login</Button>
+                <Button className="w-full py-6 text-lg glow-effect">Sign Up</Button>
               </div>
             </nav>
           </div>
